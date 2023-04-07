@@ -12,7 +12,7 @@ import {
   STAGE_OPTIONS_UNMOUNT,
 } from "./common";
 import { defaultProps, getCanvasProps, propTypes } from "./propTypes";
-if(document !== "undefined") {
+if (typeof document !== "undefined") {
   require("pixi.js");
 }
 
