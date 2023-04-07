@@ -12,7 +12,11 @@ import {
   STAGE_OPTIONS_UNMOUNT,
 } from "./common";
 import { defaultProps, getCanvasProps, propTypes } from "./propTypes";
-import * as PIXI from "pixi.js";
+
+
+if(document !== "undefined") {
+  require("pixi.js");
+}
 
 export function usePreviousProps(value) {
   const props = useRef(emptyObject);

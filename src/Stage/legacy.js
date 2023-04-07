@@ -12,7 +12,9 @@ import {
   STAGE_OPTIONS_UNMOUNT,
 } from "./common";
 import { defaultProps, getCanvasProps, propTypes } from "./propTypes";
-import * as PIXI from "pixi.js";
+if(document !== "undefined") {
+  require("pixi.js");
+}
 
 export default function createStageClass() {
   class Stage extends React.Component {
